@@ -41,7 +41,7 @@ export default function AddCustomers() {
             notify('Added Successfully', 'success')
 
             PostData(`/api/v1/patients/checkout/${res.data.data._id}`, {
-                redirection_url: 'http://localhost:3000/'
+                redirection_url: process.env.REACT_APP_BASE_URL
             }).then((res) => {
                 window.open(res.data.payUrl, '_self');
             }).catch((err) => {
