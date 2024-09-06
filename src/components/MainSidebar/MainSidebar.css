@@ -1,0 +1,66 @@
+/* 
+    Main Sidebar
+*/
+
+.main-sidebar {
+    transition: all 0.5s ease-in-out;
+    width: 250px;
+    position: fixed;
+    top: 1rem;
+    bottom: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.show-menu {
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    position: fixed;
+    right: 265px;
+    top: 50%;
+    z-index: 10;
+}
+
+.show-menu:hover {
+    scale: 1.1;
+    transform: translateX(-10px);
+}
+
+/* Media Screen */
+#collaps-menu .main-sidebar {
+    width: 0px;
+    padding: 0;
+}
+
+#collaps-menu .show-menu {
+    right: 0px;
+}
+
+.main-sidebar a {
+    color: rgba(33, 37, 41, 0.75);
+    padding: .8rem;
+}
+
+.main-sidebar .active {
+    color: #fff !important;
+    background-color: var(--main-color) !important;
+    padding: .8rem;
+    border-radius: 1rem;
+    box-shadow: var(--bs-box-shadow) !important;
+}
+
+.main-sidebar .logout {
+    color: #fff !important;
+    background-color: var(--bs-red) !important;
+    padding: .8rem;
+    border-radius: 1rem;
+    box-shadow: var(--bs-box-shadow) !important;
+    cursor: pointer;
+}
+
+.main-sidebar .logo-title {
+    background: linear-gradient(to right, #213677, #6cc5c9);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}

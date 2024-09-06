@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 44%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --radius: 0.75rem;
+    --ring: 221.2 83.2% 53.3%;
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 212 95% 68%;
+    --chart-3: 216 92% 60%;
+    --chart-4: 210 98% 78%;
+    --chart-5: 212 97% 87%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 3.7% 15.9%;
+    --radius: 0.75rem;
+    --input: 240 3.7% 15.9%;
+    --ring: 221.2 83.2% 53.3%;
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 212 95% 68%;
+    --chart-3: 216 92% 60%;
+    --chart-4: 210 98% 78%;
+    --chart-5: 212 97% 87%;
+  }
+}
+
+
+.dark {
+  --background: 224 71.4% 4.1%;
+  --foreground: 210 20% 98%;
+  --card: 224 71.4% 4.1%;
+  --card-foreground: 210 20% 98%;
+  --popover: 224 71.4% 4.1%;
+  --popover-foreground: 210 20% 98%;
+  --primary: 210 20% 98%;
+  --primary-foreground: 220.9 39.3% 11%;
+  --secondary: 215 27.9% 16.9%;
+  --secondary-foreground: 210 20% 98%;
+  --muted: 215 27.9% 16.9%;
+  --muted-foreground: 217.9 10.6% 64.9%;
+  --accent: 215 27.9% 16.9%;
+  --accent-foreground: 210 20% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+  --ring: 216 12.2% 83.9%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root {
+  --bg-main: #ebeff7;
+  --bg-container: #ffffff;
+  --main-color: #2563eb;
+}
+
+html,
+body,
+#root {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Tajawal", sans-serif !important;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-weight: 600;
+  color: #000 !important;
+  background-color: var(--bg-main);
+  position: relative;
+  /* height: 2000px; */
+}
+
+/*
+   Start Utility
+*/
+
+#container {
+  max-width: 1000px !important;
+  margin: auto !important;
+  padding: 0
+}
+
+@media (max-width: 1130px) {
+  #container {
+    margin: 0 20px !important;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.bg-main {
+  background-color: var(--bg-main) !important;
+}
+
+.bg-container {
+  background-color: var(--bg-container) !important;
+}
+
+.bg-color {
+  background-color: var(--main-color) !important;
+}
+
+.w-fit {
+  width: fit-content !important;
+}
+
+.main-color {
+  color: var(--main-color) !important;
+}
+
+/* 
+    All Pages
+*/
+
+.pages {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  right: 260px;
+  width: calc(100% - 260px - 1rem);
+  margin: 0 1rem;
+  height: calc(100vh - 2rem);
+  background: none;
+  z-index: 1;
+}
+
+#collaps-menu .pages {
+  margin: 0;
+  right: 0px;
+  width: calc(100% - 0px);
+}
+
+@media (max-width: 500px) {
+  .pages {
+    margin: 0;
+    right: 0px;
+    width: calc(100% - 0px);
+  }
+}
+
+/* 
+    Background Logo
+ */
+
+.fixed-image {
+  transition: all 0.5s ease-in-out;
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 100vh;
+  height: auto;
+  opacity: 0.25;
+}
+
+#collaps-menu .fixed-image {
+  left: 50%;
+}
+
+/* Time Picker */
+
+.react-time-picker__wrapper {
+  border: none !important;
+}
+
+/* ScrollBar */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(245, 4, 4, 0);
+}
+
+::-webkit-scrollbar {
+  float: right;
+  width: 5px;
+  height: 5px;
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px #00000000;
+  background-color: var(--main-color);
+}
+
+::-moz-selection {
+  background: var(--main-color);
+  text-shadow: none;
+  color: var(--bg-main);
+}
+
+::selection {
+  background: var(--main-color);
+  text-shadow: none;
+  color: #fff;
+}
